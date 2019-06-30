@@ -89,9 +89,11 @@ export default class BirthdayIntro extends React.Component {
           duration={this.props.handleAnimation('step2', 'step3').duration + 600} 
           delay={this.props.handleAnimation('step2', 'step3').delay * 3}
         >
-          <TouchableOpacity onPress={() => this.setDateAndroid()} style={{marginTop: '12%'}}>
-            <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>{this.state.androidDate}</Text>
-          </TouchableOpacity>
+          <View style={{marginTop: '12%'}}>
+            <TouchableOpacity onPress={() => this.setDateAndroid()} style={{padding: 15,borderColor: '#fff',borderWidth: 1,borderRadius: 5}}>
+              <Text style={{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>{this.state.androidDate}</Text>
+            </TouchableOpacity>
+          </View>
         </Animatable.View>
 
 

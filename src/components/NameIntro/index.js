@@ -41,7 +41,7 @@ export default class Wellcome extends React.Component {
             delay={this.props.handleAnimation('step1', 'step2').delay}
           >
             <Descript>
-              Bem Vido ao <Title>FEED</Title> !
+              Bem Vido ao <Title>FEEL</Title> !
             </Descript>
           </Animatable.View>
 
