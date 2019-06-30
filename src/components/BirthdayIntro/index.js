@@ -67,7 +67,7 @@ export default class BirthdayIntro extends React.Component {
             delay={this.props.handleAnimation('step2', 'step3').delay}
           >
             <Descript>
-                Oi <Title>Pedro</Title> !
+                Oi <Title>{this.props.userName}</Title> !
             </Descript>
           </Animatable.View>
 

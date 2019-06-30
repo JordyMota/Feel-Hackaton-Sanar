@@ -15,6 +15,7 @@ export default class Wellcome extends React.Component {
       step2: false,
       step3: false,
       step4: false,
+      name: '',
     };
   }
 
@@ -43,6 +44,12 @@ export default class Wellcome extends React.Component {
     }
   }
 
+  handleInputType = (text)=> {
+    this.setState({
+      name: text
+    });
+  }
+
   handleAnimation = (currentStep, nextStep) =>{
     let status = this.state[currentStep] && !this.state[nextStep];
     let secondatyStatus = !this.state[currentStep] && !this.state[nextStep];
@@ -67,18 +74,22 @@ export default class Wellcome extends React.Component {
               handleAnimation={this.handleAnimation} 
               handleChangeStep={this.handleChangeStep} 
               steps={this.state}
-            />
+              userType={this.handleInputType}
+              userName={this.state.name}
+              />
             <BirthdayIntro
               handleAnimation={this.handleAnimation} 
               handleChangeStep={this.handleChangeStep} 
               steps={this.state}
-            />
+              userName={this.state.name}
+              />
             <DiseaseIntro
               handleAnimation={this.handleAnimation} 
               handleChangeStep={this.handleChangeStep} 
               steps={this.state}
               navi={this.props.navigation}
-            />
+              userName={this.state.name}
+              />
       </Container>
     );
   }

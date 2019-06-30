@@ -11,10 +11,18 @@ export default class Home extends React.Component {
     this.state = {};
   }
 
+  static navigationOptions = () => ({
+    header: null
+  });
+
+  handleGoProfile = ()=> {
+    this.props.navigation.navigate("Profile");
+  }
+
   render() {
     return (
       <Container behavior="padding">
-            <ProfileButton />
+            <ProfileButton goProfile={this.handleGoProfile}/>
             <FrontView>
               
             </FrontView>

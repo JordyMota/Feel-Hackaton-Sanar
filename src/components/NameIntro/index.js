@@ -20,15 +20,7 @@ import Intro from '../../icons/Intro';
 export default class Wellcome extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: ''
-    };
-  }
-
-  handleInputType = (text)=> {
-    this.setState({
-      name: text
-    });
+    this.state = {};
   }
 
   render() {
@@ -75,8 +67,8 @@ export default class Wellcome extends React.Component {
         </Animatable.View>
 
           <NameInput
-            onChangeText={(text) => this.handleInputType(text)}
-            value={this.state.name}
+            onChangeText={(text) => this.props.userType(text)}
+            value={this.props.userName}
             placeholderTextColor="rgba(255,255,255,.6)"
             placeholder="Ex. John Smith"
           /> 

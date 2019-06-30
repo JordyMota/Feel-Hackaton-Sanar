@@ -18,6 +18,10 @@ export default class Profile extends React.Component {
     };
   }
 
+  static navigationOptions = () => ({
+    header: null
+  });
+
   handleLogout = () => {
     this.props.navigation.navigate("Auth");
   };

@@ -14,7 +14,7 @@ export default class Wellcome extends React.Component {
   render() {
     return (
     <Container>
-        <ProfileButton>
+        <ProfileButton onPress={this.props.goProfile}>
             <Avatar />
         </ProfileButton>
     </Container>

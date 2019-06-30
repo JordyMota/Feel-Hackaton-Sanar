@@ -43,7 +43,7 @@ export default class DiseaseIntro extends React.Component {
               delay={this.props.handleAnimation('step3', 'step4').delay}
             >
               <Descript>
-                  Oi <Title>Pedro</Title> !
+                  Oi <Title>{this.props.userName}</Title> !
               </Descript>
             </Animatable.View>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import { createBottomTabNavigator, createAppContainer, createStackNavigator } from "react-navigation";
 import createAnimatedSwitchNavigator from "react-navigation-animated-switch";
 import { Transition } from "react-native-reanimated";
 
@@ -9,7 +9,7 @@ import Phill from "../screens/Phill";
 import Wellcome from "../screens/Wellcome";
 import Login from "../screens/Login";
 
-const MainAppFlow = createBottomTabNavigator(
+const MainAppFlow = createStackNavigator(
   {
     Home,
     Phill,
